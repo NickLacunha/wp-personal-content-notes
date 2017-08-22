@@ -1,0 +1,32 @@
+/*
+Sample CSS for styling the personal notes on the front-end
+*/
+
+.personal_notes span {
+    font-weight:bold;
+}
+
+.personal_notes {
+    float:left;
+    width: 284px;
+    height: 312px;
+    background-image: url("/wp-content/uploads/personal_notes_background.PNG");
+    background-position: center;
+    background-repeat:no-repeat;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+
+.personal_notes textarea{
+    background: none;
+    border: none;
+    width: 270px;
+    height: 270px;
+    margin-top: 7px;
+}
+
+.personal_notes input[type="submit"]{
+    position: absolute;
+    bottom: -60px;
+    left: 0px;
+}

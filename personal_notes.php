@@ -75,3 +75,19 @@ add_action('wp_ajax_nopriv_personal_notes', 'ajax_personal_notes');
 function personal_notes_url(){
     return admin_url( 'admin-ajax.php' ) . '?action=personal_notes';
 }
+
+/*
+render a textarea on the frontend, populate with existing personal notes and provide a save button
+*/
+function personal_notes_markup(){
+    
+    $personal_notes = get_user_notes($user_id, $post_id);
+    $personal_notes_section =
+    "<div class='personal_notes'>
+        <span>User notes (Click to edit)</span><br/>
+        <form id='personal_notes_form'>
+            <textarea name='personal-notes'>$personal_notes</textarea>
+            <input type='submit' value='Save notes'/>
+        </form>
+    </div>";
+}
